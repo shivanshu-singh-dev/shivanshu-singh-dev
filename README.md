@@ -2,7 +2,11 @@
 
 <img src="./assets/aurora-hero.svg" width="100%" alt="Shivanshu Singh" />
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=800&color=C147E9&center=true&vCenter=true&width=600&lines=AI+%2F+Agent+Security+Researcher;Endpoint+%26+Network+Security;VIT+Chennai+%7C+Cybersecurity" alt="Typing SVG" />
+<img
+  src="https://raw.githubusercontent.com/shivanshu-singh-dev/shivanshu-singh-dev/main/assets/aurora-hero.svg"
+  width="100%"
+  alt="Shivanshu Singh"
+/>
 
 </div>
 

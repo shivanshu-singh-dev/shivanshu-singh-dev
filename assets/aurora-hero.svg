@@ -1,328 +1,949 @@
-<svg width="1400" height="460" viewBox="0 0 1400 460"
-     xmlns="http://www.w3.org/2000/svg">
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="1400"
+  height="500"
+  viewBox="0 0 1400 500">
 
-<defs>
+  <defs>
 
-  <!-- Background -->
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0%" stop-color="#05030C"/>
-    <stop offset="45%" stop-color="#100722"/>
-    <stop offset="75%" stop-color="#190B32"/>
-    <stop offset="100%" stop-color="#060A16"/>
-  </linearGradient>
+    <!-- ====================================================== -->
+    <!-- BACKGROUND -->
+    <!-- ====================================================== -->
 
-  <!-- Aurora -->
-  <linearGradient id="aurora1" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
-    <stop offset="25%" stop-color="#A855F7" stop-opacity="0.42"/>
-    <stop offset="52%" stop-color="#E879F9" stop-opacity="0.62"/>
-    <stop offset="75%" stop-color="#38BDF8" stop-opacity="0.36"/>
-    <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
-  </linearGradient>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030208"/>
+      <stop offset="30%" stop-color="#0A0418"/>
+      <stop offset="55%" stop-color="#16082A"/>
+      <stop offset="78%" stop-color="#100722"/>
+      <stop offset="100%" stop-color="#030812"/>
+    </linearGradient>
 
-  <linearGradient id="aurora2" x1="1" y1="0" x2="0" y2="0">
-    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
-    <stop offset="30%" stop-color="#38BDF8" stop-opacity="0.30"/>
-    <stop offset="58%" stop-color="#8B5CF6" stop-opacity="0.48"/>
-    <stop offset="80%" stop-color="#D946EF" stop-opacity="0.30"/>
-    <stop offset="100%" stop-color="#D946EF" stop-opacity="0"/>
-  </linearGradient>
+    <!-- ====================================================== -->
+    <!-- AURORA GRADIENTS -->
+    <!-- ====================================================== -->
 
-  <!-- Glow -->
-  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="7" result="blur"/>
-    <feMerge>
-      <feMergeNode in="blur"/>
-      <feMergeNode in="SourceGraphic"/>
-    </feMerge>
-  </filter>
+    <linearGradient id="purpleAurora" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6D28D9" stop-opacity="0"/>
+      <stop offset="18%" stop-color="#8B5CF6" stop-opacity="0.32"/>
+      <stop offset="42%" stop-color="#C084FC" stop-opacity="0.72"/>
+      <stop offset="58%" stop-color="#E879F9" stop-opacity="0.68"/>
+      <stop offset="78%" stop-color="#38BDF8" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </linearGradient>
 
-  <!-- Soft nebula -->
-  <filter id="blur30">
-    <feGaussianBlur stdDeviation="30"/>
-  </filter>
+    <linearGradient id="cyanAurora" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="22%" stop-color="#38BDF8" stop-opacity="0.28"/>
+      <stop offset="48%" stop-color="#818CF8" stop-opacity="0.48"/>
+      <stop offset="70%" stop-color="#C084FC" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#D946EF" stop-opacity="0"/>
+    </linearGradient>
 
-  <!-- Grid -->
-  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
-    <path d="M42 0H0V42" fill="none"
-          stroke="#A78BFA"
-          stroke-opacity="0.055"/>
-  </pattern>
+    <!-- ====================================================== -->
+    <!-- GRID -->
+    <!-- ====================================================== -->
 
-</defs>
+    <pattern
+      id="grid"
+      width="40"
+      height="40"
+      patternUnits="userSpaceOnUse">
 
-<!-- BACKGROUND -->
+      <path
+        d="M40 0H0V40"
+        fill="none"
+        stroke="#A78BFA"
+        stroke-opacity="0.045"/>
 
-<rect width="1400" height="460" rx="22" fill="url(#bg)"/>
+    </pattern>
 
-<!-- GRID -->
+    <!-- ====================================================== -->
+    <!-- GLOW FILTERS -->
+    <!-- ====================================================== -->
 
-<rect width="1400" height="460" rx="22" fill="url(#grid)"/>
+    <filter
+      id="nebulaGlow"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%">
 
-<!-- NEBULA CLOUDS -->
+      <feGaussianBlur stdDeviation="30"/>
 
-<ellipse cx="380" cy="190"
-         rx="340" ry="115"
-         fill="#7C3AED"
-         opacity="0.12"
-         filter="url(#blur30)">
-  <animate
-    attributeName="cx"
-    values="380;430;380"
-    dur="12s"
-    repeatCount="indefinite"/>
-</ellipse>
+    </filter>
 
-<ellipse cx="1020" cy="250"
-         rx="350" ry="130"
-         fill="#06B6D4"
-         opacity="0.10"
-         filter="url(#blur30)">
-  <animate
-    attributeName="cx"
-    values="1020;960;1020"
-    dur="15s"
-    repeatCount="indefinite"/>
-</ellipse>
+    <filter
+      id="softGlow"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%">
 
-<!-- AURORA RIBBONS -->
+      <feGaussianBlur stdDeviation="10"/>
 
-<path
-  d="M-100 300
-     C150 90 360 80 570 230
-     C760 365 955 355 1220 145
-     C1310 75 1380 70 1500 100"
-  fill="none"
-  stroke="url(#aurora1)"
-  stroke-width="65"
-  filter="url(#blur30)"
-  opacity="0.75">
+    </filter>
 
-  <animate
-    attributeName="d"
-    dur="14s"
-    repeatCount="indefinite"
-    values="
-    M-100 300 C150 90 360 80 570 230 C760 365 955 355 1220 145 C1310 75 1380 70 1500 100;
-    M-100 340 C160 110 390 120 580 250 C780 390 980 315 1220 165 C1320 100 1410 110 1500 130;
-    M-100 300 C150 90 360 80 570 230 C760 365 955 355 1220 145 C1310 75 1380 70 1500 100"/>
-</path>
+    <filter
+      id="tinyGlow"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%">
 
-<path
-  d="M-100 160
-     C170 350 365 360 590 205
-     C780 75 970 75 1200 290
-     C1310 385 1390 370 1500 350"
-  fill="none"
-  stroke="url(#aurora2)"
-  stroke-width="42"
-  filter="url(#blur30)"
-  opacity="0.65">
+      <feGaussianBlur stdDeviation="3"/>
 
-  <animate
-    attributeName="d"
-    dur="17s"
-    repeatCount="indefinite"
-    values="
-    M-100 160 C170 350 365 360 590 205 C780 75 970 75 1200 290 C1310 385 1390 370 1500 350;
-    M-100 185 C180 325 380 390 600 220 C790 70 980 110 1215 270 C1320 345 1410 390 1500 325;
-    M-100 160 C170 350 365 360 590 205 C780 75 970 75 1200 290 C1310 385 1390 370 1500 350"/>
-</path>
+    </filter>
 
-<!-- STARS -->
+    <filter
+      id="titleGlow"
+      x="-40%"
+      y="-40%"
+      width="180%"
+      height="180%">
 
-<g fill="#E9D5FF">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="4"
+        result="blur"/>
 
-  <circle cx="98" cy="82" r="2">
-    <animate attributeName="opacity"
-             values="0.25;1;0.25"
-             dur="2.8s"
-             repeatCount="indefinite"/>
-  </circle>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
 
-  <circle cx="195" cy="330" r="1.8">
-    <animate attributeName="opacity"
-             values="1;0.25;1"
-             dur="4s"
-             repeatCount="indefinite"/>
-  </circle>
+    </filter>
 
-  <circle cx="305" cy="70" r="1.4">
-    <animate attributeName="opacity"
-             values="0.2;1;0.2"
-             dur="3.2s"
-             repeatCount="indefinite"/>
-  </circle>
+  </defs>
 
-  <circle cx="1080" cy="85" r="2">
-    <animate attributeName="opacity"
-             values="1;0.2;1"
-             dur="3.8s"
-             repeatCount="indefinite"/>
-  </circle>
+  <!-- ====================================================== -->
+  <!-- BASE -->
+  <!-- ====================================================== -->
 
-  <circle cx="1190" cy="350" r="1.7">
-    <animate attributeName="opacity"
-             values="0.2;1;0.2"
-             dur="2.6s"
-             repeatCount="indefinite"/>
-  </circle>
+  <rect
+    width="1400"
+    height="500"
+    rx="24"
+    fill="url(#background)"/>
 
-  <circle cx="1310" cy="125" r="1.4">
-    <animate attributeName="opacity"
-             values="1;0.2;1"
-             dur="4.5s"
-             repeatCount="indefinite"/>
-  </circle>
+  <rect
+    width="1400"
+    height="500"
+    rx="24"
+    fill="url(#grid)"/>
 
-</g>
+  <!-- ====================================================== -->
+  <!-- MOVING GRID GLOW -->
+  <!-- ====================================================== -->
 
-<!-- CONSTELLATION -->
+  <rect
+    x="-40"
+    y="0"
+    width="4"
+    height="500"
+    fill="#7DD3FC"
+    opacity="0.05">
 
-<g stroke="#7DD3FC"
-   stroke-opacity="0.25"
-   stroke-width="1">
+    <animate
+      attributeName="x"
+      values="-40;1440;-40"
+      dur="9s"
+      repeatCount="indefinite"/>
 
-  <path d="M90 130 L190 95 L285 145 L380 92"/>
-  <path d="M1040 112 L1130 155 L1230 98 L1320 140"/>
+  </rect>
 
-</g>
+  <!-- ====================================================== -->
+  <!-- DEEP NEBULA CLOUDS -->
+  <!-- ====================================================== -->
 
-<g fill="#7DD3FC">
+  <ellipse
+    cx="310"
+    cy="160"
+    rx="380"
+    ry="150"
+    fill="#7C3AED"
+    opacity="0.11"
+    filter="url(#nebulaGlow)">
 
-  <circle cx="90" cy="130" r="3"/>
-  <circle cx="190" cy="95" r="3"/>
-  <circle cx="285" cy="145" r="3"/>
-  <circle cx="380" cy="92" r="3"/>
+    <animate
+      attributeName="cx"
+      values="310;420;310"
+      dur="16s"
+      repeatCount="indefinite"/>
 
-  <circle cx="1040" cy="112" r="3"/>
-  <circle cx="1130" cy="155" r="3"/>
-  <circle cx="1230" cy="98" r="3"/>
-  <circle cx="1320" cy="140" r="3"/>
+    <animate
+      attributeName="ry"
+      values="150;180;150"
+      dur="11s"
+      repeatCount="indefinite"/>
 
-</g>
+  </ellipse>
 
-<!-- ORBIT -->
+  <ellipse
+    cx="1060"
+    cy="290"
+    rx="400"
+    ry="160"
+    fill="#06B6D4"
+    opacity="0.08"
+    filter="url(#nebulaGlow)">
 
-<ellipse cx="700" cy="230"
-         rx="225"
-         ry="68"
-         fill="none"
-         stroke="#A78BFA"
-         stroke-opacity="0.18"
-         stroke-width="1.5"
-         transform="rotate(-10 700 230)"/>
+    <animate
+      attributeName="cx"
+      values="1060;950;1060"
+      dur="18s"
+      repeatCount="indefinite"/>
 
-<ellipse cx="700" cy="230"
-         rx="185"
-         ry="48"
-         fill="none"
-         stroke="#67E8F9"
-         stroke-opacity="0.15"
-         stroke-width="1"/>
+    <animate
+      attributeName="ry"
+      values="160;190;160"
+      dur="13s"
+      repeatCount="indefinite"/>
 
-<circle cx="475" cy="190" r="3" fill="#67E8F9">
-  <animateTransform
-    attributeName="transform"
-    type="rotate"
-    from="0 700 230"
-    to="360 700 230"
-    dur="9s"
-    repeatCount="indefinite"/>
-</circle>
+  </ellipse>
 
-<circle cx="885" cy="254" r="3" fill="#C084FC">
-  <animateTransform
-    attributeName="transform"
-    type="rotate"
-    from="360 700 230"
-    to="0 700 230"
-    dur="12s"
-    repeatCount="indefinite"/>
-</circle>
+  <ellipse
+    cx="700"
+    cy="235"
+    rx="280"
+    ry="90"
+    fill="#A855F7"
+    opacity="0.08"
+    filter="url(#nebulaGlow)">
 
-<!-- HEADER DETAILS -->
+    <animate
+      attributeName="rx"
+      values="280;330;280"
+      dur="12s"
+      repeatCount="indefinite"/>
 
-<text x="56" y="50"
-      fill="#A5B4FC"
-      font-family="JetBrains Mono, monospace"
-      font-size="11"
-      letter-spacing="3">
-  CYBERSECURITY / SYSTEMS / RESEARCH
-</text>
+  </ellipse>
 
-<text x="1344" y="50"
-      fill="#67E8F9"
-      font-family="JetBrains Mono, monospace"
-      font-size="11"
-      text-anchor="end"
-      letter-spacing="2">
-  VIT CHENNAI
-</text>
+  <!-- ====================================================== -->
+  <!-- MAIN AURORA -->
+  <!-- ====================================================== -->
 
-<!-- MAIN TITLE -->
+  <path
+    d="M-150 330
+       C120 75 345 55 555 215
+       C770 380 965 350 1210 125
+       C1320 30 1415 70 1540 110"
+    fill="none"
+    stroke="url(#purpleAurora)"
+    stroke-width="72"
+    opacity="0.76"
+    filter="url(#nebulaGlow)">
 
-<text x="700" y="210"
-      fill="#FFFFFF"
-      font-family="Arial, Helvetica, sans-serif"
-      font-size="58"
-      font-weight="700"
-      text-anchor="middle"
-      letter-spacing="7"
-      filter="url(#glow)">
-  SHIVANSHU SINGH
-</text>
+    <animate
+      attributeName="d"
+      dur="17s"
+      repeatCount="indefinite"
+      values="
+      M-150 330 C120 75 345 55 555 215 C770 380 965 350 1210 125 C1320 30 1415 70 1540 110;
+      M-150 370 C135 120 370 95 575 235 C785 390 985 325 1220 155 C1330 70 1425 100 1540 140;
+      M-150 330 C120 75 345 55 555 215 C770 380 965 350 1210 125 C1320 30 1415 70 1540 110"/>
 
-<text x="700" y="246"
-      fill="#A5F3FC"
-      font-family="JetBrains Mono, monospace"
-      font-size="13"
-      text-anchor="middle"
-      letter-spacing="5">
-  CYBERSECURITY ENGINEERING
-</text>
+  </path>
 
-<text x="700" y="278"
-      fill="#C4B5FD"
-      font-family="JetBrains Mono, monospace"
-      font-size="11"
-      text-anchor="middle"
-      letter-spacing="2">
-  AI SECURITY · ENDPOINTS · NETWORKS · MALWARE
-</text>
+  <!-- SECOND AURORA -->
 
-<!-- SIGNAL -->
+  <path
+    d="M-150 135
+       C160 335 375 375 590 205
+       C790 55 1005 80 1215 285
+       C1325 395 1420 375 1540 320"
+    fill="none"
+    stroke="url(#cyanAurora)"
+    stroke-width="52"
+    opacity="0.72"
+    filter="url(#nebulaGlow)">
 
-<circle cx="460" cy="325" r="2.8" fill="#67E8F9">
+    <animate
+      attributeName="d"
+      dur="20s"
+      repeatCount="indefinite"
+      values="
+      M-150 135 C160 335 375 375 590 205 C790 55 1005 80 1215 285 C1325 395 1420 375 1540 320;
+      M-150 170 C175 315 385 395 610 225 C805 70 1005 110 1230 265 C1330 350 1425 390 1540 300;
+      M-150 135 C160 335 375 375 590 205 C790 55 1005 80 1215 285 C1325 395 1420 375 1540 320"/>
 
-  <animate
-    attributeName="cx"
-    values="460;930"
-    dur="5s"
-    repeatCount="indefinite"/>
+  </path>
 
-  <animate
-    attributeName="opacity"
-    values="0;1;1;0"
-    dur="5s"
-    repeatCount="indefinite"/>
+  <!-- ====================================================== -->
+  <!-- FINE AURORA LINES -->
+  <!-- ====================================================== -->
 
-</circle>
+  <path
+    d="M-80 315
+       C210 120 390 125 570 225
+       C750 325 960 325 1260 135"
+    fill="none"
+    stroke="#D8B4FE"
+    stroke-opacity="0.16"
+    stroke-width="2">
 
-<line x1="460" y1="325"
-      x2="940" y2="325"
+    <animate
+      attributeName="opacity"
+      values="0.08;0.32;0.08"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+  </path>
+
+  <path
+    d="M-40 190
+       C210 310 420 355 610 230
+       C820 90 1010 110 1280 300"
+    fill="none"
+    stroke="#67E8F9"
+    stroke-opacity="0.12"
+    stroke-width="2">
+
+    <animate
+      attributeName="opacity"
+      values="0.08;0.28;0.08"
+      dur="6s"
+      repeatCount="indefinite"/>
+
+  </path>
+
+  <!-- ====================================================== -->
+  <!-- STARS -->
+  <!-- ====================================================== -->
+
+  <g fill="#F5E9FF">
+
+    <circle cx="80" cy="80" r="2">
+      <animate attributeName="opacity"
+        values="0.15;1;0.15"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="150" cy="360" r="1.4">
+      <animate attributeName="opacity"
+        values="1;0.2;1"
+        dur="4.7s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="230" cy="105" r="1.4">
+      <animate attributeName="opacity"
+        values="0.2;1;0.2"
+        dur="3.7s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="310" cy="55" r="2">
+      <animate attributeName="opacity"
+        values="1;0.15;1"
+        dur="5s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="405" cy="340" r="1.6">
+      <animate attributeName="opacity"
+        values="0.15;1;0.15"
+        dur="3.3s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="520" cy="90" r="1.3">
+      <animate attributeName="opacity"
+        values="1;0.2;1"
+        dur="4.2s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="890" cy="80" r="1.5">
+      <animate attributeName="opacity"
+        values="0.2;1;0.2"
+        dur="3.5s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="970" cy="365" r="1.8">
+      <animate attributeName="opacity"
+        values="1;0.2;1"
+        dur="4.4s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1060" cy="95" r="2">
+      <animate attributeName="opacity"
+        values="0.15;1;0.15"
+        dur="2.8s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1140" cy="340" r="1.5">
+      <animate attributeName="opacity"
+        values="1;0.2;1"
+        dur="5.2s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1230" cy="80" r="1.3">
+      <animate attributeName="opacity"
+        values="0.2;1;0.2"
+        dur="3.2s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1325" cy="330" r="2">
+      <animate attributeName="opacity"
+        values="1;0.15;1"
+        dur="4s"
+        repeatCount="indefinite"/>
+    </circle>
+
+  </g>
+
+  <!-- ====================================================== -->
+  <!-- FALLING PARTICLES -->
+  <!-- ====================================================== -->
+
+  <g fill="#C4B5FD">
+
+    <circle cx="120" cy="150" r="2">
+      <animate attributeName="cy"
+        values="150;420;150"
+        dur="8s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.8;0"
+        dur="8s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="270" cy="180" r="1.5">
+      <animate attributeName="cy"
+        values="180;430;180"
+        dur="10s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.65;0"
+        dur="10s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="470" cy="125" r="1.5">
+      <animate attributeName="cy"
+        values="125;400;125"
+        dur="9s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.75;0"
+        dur="9s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="780" cy="100" r="1.8">
+      <animate attributeName="cy"
+        values="100;410;100"
+        dur="11s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.8;0"
+        dur="11s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1010" cy="155" r="1.4">
+      <animate attributeName="cy"
+        values="155;440;155"
+        dur="8.5s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.7;0"
+        dur="8.5s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="1280" cy="160" r="1.7">
+      <animate attributeName="cy"
+        values="160;430;160"
+        dur="9.5s"
+        repeatCount="indefinite"/>
+      <animate attributeName="opacity"
+        values="0;0.8;0"
+        dur="9.5s"
+        repeatCount="indefinite"/>
+    </circle>
+
+  </g>
+
+  <!-- ====================================================== -->
+  <!-- SHOOTING STARS -->
+  <!-- ====================================================== -->
+
+  <g stroke-linecap="round">
+
+    <line
+      x1="140"
+      y1="90"
+      x2="190"
+      y2="70"
       stroke="#67E8F9"
-      stroke-opacity="0.14"/>
+      stroke-width="2"
+      opacity="0">
 
-<!-- FOOT LABEL -->
+      <animate
+        attributeName="x1"
+        values="140;400;140"
+        dur="9s"
+        repeatCount="indefinite"/>
 
-<text x="700" y="385"
-      fill="#64748B"
-      font-family="JetBrains Mono, monospace"
-      font-size="10"
-      text-anchor="middle"
-      letter-spacing="2">
-  OBSERVE · ANALYZE · BUILD · TEST
-</text>
+      <animate
+        attributeName="x2"
+        values="190;450;190"
+        dur="9s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="y1"
+        values="90;20;90"
+        dur="9s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="y2"
+        values="70;0;70"
+        dur="9s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.8;0"
+        dur="9s"
+        repeatCount="indefinite"/>
+
+    </line>
+
+    <line
+      x1="1180"
+      y1="120"
+      x2="1235"
+      y2="95"
+      stroke="#C084FC"
+      stroke-width="2"
+      opacity="0">
+
+      <animate
+        attributeName="x1"
+        values="1180;900;1180"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="x2"
+        values="1235;955;1235"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="y1"
+        values="120;40;120"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="y2"
+        values="95;15;95"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+      <animate
+        attributeName="opacity"
+        values="0;0.75;0"
+        dur="12s"
+        repeatCount="indefinite"/>
+
+    </line>
+
+  </g>
+
+  <!-- ====================================================== -->
+  <!-- CONSTELLATIONS -->
+  <!-- ====================================================== -->
+
+  <g
+    stroke="#7DD3FC"
+    stroke-opacity="0.22"
+    stroke-width="1"
+    fill="none">
+
+    <path d="M70 125 L175 95 L270 145 L365 90"/>
+    <path d="M1030 110 L1120 150 L1215 92 L1310 138"/>
+
+  </g>
+
+  <g fill="#67E8F9">
+
+    <circle cx="70" cy="125" r="3">
+      <animate attributeName="r"
+        values="2;4;2"
+        dur="2.5s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="175" cy="95" r="3">
+      <animate attributeName="r"
+        values="3;2;3"
+        dur="3s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="270" cy="145" r="3">
+      <animate attributeName="r"
+        values="2;4;2"
+        dur="2.8s"
+        repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="365" cy="90" r="3"/>
+
+    <circle cx="1030" cy="110" r="3"/>
+    <circle cx="1120" cy="150" r="3"/>
+    <circle cx="1215" cy="92" r="3"/>
+    <circle cx="1310" cy="138" r="3"/>
+
+  </g>
+
+  <!-- ====================================================== -->
+  <!-- ORBITAL SYSTEM -->
+  <!-- ====================================================== -->
+
+  <ellipse
+    cx="700"
+    cy="225"
+    rx="270"
+    ry="82"
+    fill="none"
+    stroke="#A78BFA"
+    stroke-opacity="0.16"
+    stroke-width="1.5"
+    transform="rotate(-8 700 225)">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="-8 700 225"
+      to="352 700 225"
+      dur="40s"
+      repeatCount="indefinite"/>
+
+  </ellipse>
+
+  <ellipse
+    cx="700"
+    cy="225"
+    rx="210"
+    ry="58"
+    fill="none"
+    stroke="#67E8F9"
+    stroke-opacity="0.13"
+    stroke-width="1">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 700 225"
+      to="360 700 225"
+      dur="30s"
+      repeatCount="indefinite"/>
+
+  </ellipse>
+
+  <!-- orbiting particles -->
+
+  <circle
+    cx="430"
+    cy="190"
+    r="4"
+    fill="#67E8F9"
+    filter="url(#tinyGlow)">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 700 225"
+      to="360 700 225"
+      dur="9s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <circle
+    cx="910"
+    cy="260"
+    r="3"
+    fill="#C084FC"
+    filter="url(#tinyGlow)">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="360 700 225"
+      to="0 700 225"
+      dur="12s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <circle
+    cx="700"
+    cy="143"
+    r="2.5"
+    fill="#E879F9">
+
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 700 225"
+      to="360 700 225"
+      dur="16s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- ====================================================== -->
+  <!-- CENTER CORE -->
+  <!-- ====================================================== -->
+
+  <circle
+    cx="700"
+    cy="225"
+    r="105"
+    fill="#8B5CF6"
+    opacity="0.06"
+    filter="url(#softGlow)">
+
+    <animate
+      attributeName="r"
+      values="105;125;105"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="opacity"
+      values="0.03;0.10;0.03"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <circle
+    cx="700"
+    cy="225"
+    r="70"
+    fill="none"
+    stroke="#C084FC"
+    stroke-opacity="0.09"
+    stroke-width="1">
+
+    <animate
+      attributeName="r"
+      values="70;82;70"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- ====================================================== -->
+  <!-- TOP INFORMATION -->
+  <!-- ====================================================== -->
+
+  <text
+    x="52"
+    y="48"
+    fill="#A5B4FC"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    letter-spacing="3">
+
+    COMPUTER SCIENCE
+
+  </text>
+
+  <text
+    x="1348"
+    y="48"
+    text-anchor="end"
+    fill="#67E8F9"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    letter-spacing="2">
+
+    VIT CHENNAI
+
+  </text>
+
+  <!-- ====================================================== -->
+  <!-- TITLE -->
+  <!-- ====================================================== -->
+
+  <text
+    x="700"
+    y="205"
+    text-anchor="middle"
+    fill="#FFFFFF"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="58"
+    font-weight="700"
+    letter-spacing="7"
+    filter="url(#titleGlow)">
+
+    SHIVANSHU SINGH
+
+    <animate
+      attributeName="opacity"
+      values="0.9;1;0.9"
+      dur="4s"
+      repeatCount="indefinite"/>
+
+  </text>
+
+  <text
+    x="700"
+    y="242"
+    text-anchor="middle"
+    fill="#A5F3FC"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="14"
+    letter-spacing="4">
+
+    SOFTWARE · SECURITY · AI
+
+  </text>
+
+  <!-- ====================================================== -->
+  <!-- ENERGY LINE -->
+  <!-- ====================================================== -->
+
+  <line
+    x1="470"
+    y1="325"
+    x2="930"
+    y2="325"
+    stroke="#67E8F9"
+    stroke-opacity="0.12"/>
+
+  <line
+    x1="470"
+    y1="325"
+    x2="570"
+    y2="325"
+    stroke="#67E8F9"
+    stroke-width="3"
+    opacity="0.35">
+
+    <animate
+      attributeName="x1"
+      values="470;850;470"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="x2"
+      values="570;950;570"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+  </line>
+
+  <!-- moving energy particle -->
+
+  <circle
+    cx="470"
+    cy="325"
+    r="3"
+    fill="#67E8F9"
+    filter="url(#tinyGlow)">
+
+    <animate
+      attributeName="cx"
+      values="470;930;470"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="opacity"
+      values="0;1;0"
+      dur="5s"
+      repeatCount="indefinite"/>
+
+  </circle>
+
+  <!-- ====================================================== -->
+  <!-- SCAN BAR -->
+  <!-- ====================================================== -->
+
+  <rect
+    x="38"
+    y="80"
+    width="1324"
+    height="1"
+    fill="#67E8F9"
+    opacity="0.16">
+
+    <animate
+      attributeName="y"
+      values="80;420;80"
+      dur="8s"
+      repeatCount="indefinite"/>
+
+    <animate
+      attributeName="opacity"
+      values="0;0.18;0"
+      dur="8s"
+      repeatCount="indefinite"/>
+
+  </rect>
+
+  <!-- ====================================================== -->
+  <!-- BOTTOM LABEL -->
+  <!-- ====================================================== -->
+
+  <text
+    x="700"
+    y="382"
+    text-anchor="middle"
+    fill="#64748B"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="10"
+    letter-spacing="3">
+
+    BUILD · EXPLORE · LEARN
+
+  </text>
+
+  <!-- ====================================================== -->
+  <!-- CORNER DECORATIONS -->
+  <!-- ====================================================== -->
+
+  <path
+    d="M28 78 V28 H78"
+    fill="none"
+    stroke="#7DD3FC"
+    stroke-opacity="0.35"/>
+
+  <path
+    d="M1372 78 V28 H1322"
+    fill="none"
+    stroke="#C084FC"
+    stroke-opacity="0.35"/>
+
+  <path
+    d="M28 422 V472 H78"
+    fill="none"
+    stroke="#C084FC"
+    stroke-opacity="0.28"/>
+
+  <path
+    d="M1372 422 V472 H1322"
+    fill="none"
+    stroke="#7DD3FC"
+    stroke-opacity="0.28"/>
 
 </svg>
