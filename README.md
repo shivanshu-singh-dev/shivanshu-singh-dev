@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,100:F953C6&height=200&section=header&text=Shivanshu%20Singh&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20%2F%20Agent%20Security%20%7C%20Endpoint%20%26%20Network%20Security&descAlignY=55&descSize=18" alt="header" width="100%"/>
+<img src="./assets/aurora-hero.svg" width="100%" alt="Shivanshu Singh" />
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=800&color=C147E9&center=true&vCenter=true&width=600&lines=AI+%2F+Agent+Security+Researcher;Endpoint+%26+Network+Security;VIT+Chennai+%7C+Cybersecurity" alt="Typing SVG" />
 

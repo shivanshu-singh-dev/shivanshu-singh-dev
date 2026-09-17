@@ -1,0 +1,328 @@
+<svg width="1400" height="460" viewBox="0 0 1400 460"
+     xmlns="http://www.w3.org/2000/svg">
+
+<defs>
+
+  <!-- Background -->
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#05030C"/>
+    <stop offset="45%" stop-color="#100722"/>
+    <stop offset="75%" stop-color="#190B32"/>
+    <stop offset="100%" stop-color="#060A16"/>
+  </linearGradient>
+
+  <!-- Aurora -->
+  <linearGradient id="aurora1" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0"/>
+    <stop offset="25%" stop-color="#A855F7" stop-opacity="0.42"/>
+    <stop offset="52%" stop-color="#E879F9" stop-opacity="0.62"/>
+    <stop offset="75%" stop-color="#38BDF8" stop-opacity="0.36"/>
+    <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+  </linearGradient>
+
+  <linearGradient id="aurora2" x1="1" y1="0" x2="0" y2="0">
+    <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+    <stop offset="30%" stop-color="#38BDF8" stop-opacity="0.30"/>
+    <stop offset="58%" stop-color="#8B5CF6" stop-opacity="0.48"/>
+    <stop offset="80%" stop-color="#D946EF" stop-opacity="0.30"/>
+    <stop offset="100%" stop-color="#D946EF" stop-opacity="0"/>
+  </linearGradient>
+
+  <!-- Glow -->
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="7" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- Soft nebula -->
+  <filter id="blur30">
+    <feGaussianBlur stdDeviation="30"/>
+  </filter>
+
+  <!-- Grid -->
+  <pattern id="grid" width="42" height="42" patternUnits="userSpaceOnUse">
+    <path d="M42 0H0V42" fill="none"
+          stroke="#A78BFA"
+          stroke-opacity="0.055"/>
+  </pattern>
+
+</defs>
+
+<!-- BACKGROUND -->
+
+<rect width="1400" height="460" rx="22" fill="url(#bg)"/>
+
+<!-- GRID -->
+
+<rect width="1400" height="460" rx="22" fill="url(#grid)"/>
+
+<!-- NEBULA CLOUDS -->
+
+<ellipse cx="380" cy="190"
+         rx="340" ry="115"
+         fill="#7C3AED"
+         opacity="0.12"
+         filter="url(#blur30)">
+  <animate
+    attributeName="cx"
+    values="380;430;380"
+    dur="12s"
+    repeatCount="indefinite"/>
+</ellipse>
+
+<ellipse cx="1020" cy="250"
+         rx="350" ry="130"
+         fill="#06B6D4"
+         opacity="0.10"
+         filter="url(#blur30)">
+  <animate
+    attributeName="cx"
+    values="1020;960;1020"
+    dur="15s"
+    repeatCount="indefinite"/>
+</ellipse>
+
+<!-- AURORA RIBBONS -->
+
+<path
+  d="M-100 300
+     C150 90 360 80 570 230
+     C760 365 955 355 1220 145
+     C1310 75 1380 70 1500 100"
+  fill="none"
+  stroke="url(#aurora1)"
+  stroke-width="65"
+  filter="url(#blur30)"
+  opacity="0.75">
+
+  <animate
+    attributeName="d"
+    dur="14s"
+    repeatCount="indefinite"
+    values="
+    M-100 300 C150 90 360 80 570 230 C760 365 955 355 1220 145 C1310 75 1380 70 1500 100;
+    M-100 340 C160 110 390 120 580 250 C780 390 980 315 1220 165 C1320 100 1410 110 1500 130;
+    M-100 300 C150 90 360 80 570 230 C760 365 955 355 1220 145 C1310 75 1380 70 1500 100"/>
+</path>
+
+<path
+  d="M-100 160
+     C170 350 365 360 590 205
+     C780 75 970 75 1200 290
+     C1310 385 1390 370 1500 350"
+  fill="none"
+  stroke="url(#aurora2)"
+  stroke-width="42"
+  filter="url(#blur30)"
+  opacity="0.65">
+
+  <animate
+    attributeName="d"
+    dur="17s"
+    repeatCount="indefinite"
+    values="
+    M-100 160 C170 350 365 360 590 205 C780 75 970 75 1200 290 C1310 385 1390 370 1500 350;
+    M-100 185 C180 325 380 390 600 220 C790 70 980 110 1215 270 C1320 345 1410 390 1500 325;
+    M-100 160 C170 350 365 360 590 205 C780 75 970 75 1200 290 C1310 385 1390 370 1500 350"/>
+</path>
+
+<!-- STARS -->
+
+<g fill="#E9D5FF">
+
+  <circle cx="98" cy="82" r="2">
+    <animate attributeName="opacity"
+             values="0.25;1;0.25"
+             dur="2.8s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="195" cy="330" r="1.8">
+    <animate attributeName="opacity"
+             values="1;0.25;1"
+             dur="4s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="305" cy="70" r="1.4">
+    <animate attributeName="opacity"
+             values="0.2;1;0.2"
+             dur="3.2s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1080" cy="85" r="2">
+    <animate attributeName="opacity"
+             values="1;0.2;1"
+             dur="3.8s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1190" cy="350" r="1.7">
+    <animate attributeName="opacity"
+             values="0.2;1;0.2"
+             dur="2.6s"
+             repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="1310" cy="125" r="1.4">
+    <animate attributeName="opacity"
+             values="1;0.2;1"
+             dur="4.5s"
+             repeatCount="indefinite"/>
+  </circle>
+
+</g>
+
+<!-- CONSTELLATION -->
+
+<g stroke="#7DD3FC"
+   stroke-opacity="0.25"
+   stroke-width="1">
+
+  <path d="M90 130 L190 95 L285 145 L380 92"/>
+  <path d="M1040 112 L1130 155 L1230 98 L1320 140"/>
+
+</g>
+
+<g fill="#7DD3FC">
+
+  <circle cx="90" cy="130" r="3"/>
+  <circle cx="190" cy="95" r="3"/>
+  <circle cx="285" cy="145" r="3"/>
+  <circle cx="380" cy="92" r="3"/>
+
+  <circle cx="1040" cy="112" r="3"/>
+  <circle cx="1130" cy="155" r="3"/>
+  <circle cx="1230" cy="98" r="3"/>
+  <circle cx="1320" cy="140" r="3"/>
+
+</g>
+
+<!-- ORBIT -->
+
+<ellipse cx="700" cy="230"
+         rx="225"
+         ry="68"
+         fill="none"
+         stroke="#A78BFA"
+         stroke-opacity="0.18"
+         stroke-width="1.5"
+         transform="rotate(-10 700 230)"/>
+
+<ellipse cx="700" cy="230"
+         rx="185"
+         ry="48"
+         fill="none"
+         stroke="#67E8F9"
+         stroke-opacity="0.15"
+         stroke-width="1"/>
+
+<circle cx="475" cy="190" r="3" fill="#67E8F9">
+  <animateTransform
+    attributeName="transform"
+    type="rotate"
+    from="0 700 230"
+    to="360 700 230"
+    dur="9s"
+    repeatCount="indefinite"/>
+</circle>
+
+<circle cx="885" cy="254" r="3" fill="#C084FC">
+  <animateTransform
+    attributeName="transform"
+    type="rotate"
+    from="360 700 230"
+    to="0 700 230"
+    dur="12s"
+    repeatCount="indefinite"/>
+</circle>
+
+<!-- HEADER DETAILS -->
+
+<text x="56" y="50"
+      fill="#A5B4FC"
+      font-family="JetBrains Mono, monospace"
+      font-size="11"
+      letter-spacing="3">
+  CYBERSECURITY / SYSTEMS / RESEARCH
+</text>
+
+<text x="1344" y="50"
+      fill="#67E8F9"
+      font-family="JetBrains Mono, monospace"
+      font-size="11"
+      text-anchor="end"
+      letter-spacing="2">
+  VIT CHENNAI
+</text>
+
+<!-- MAIN TITLE -->
+
+<text x="700" y="210"
+      fill="#FFFFFF"
+      font-family="Arial, Helvetica, sans-serif"
+      font-size="58"
+      font-weight="700"
+      text-anchor="middle"
+      letter-spacing="7"
+      filter="url(#glow)">
+  SHIVANSHU SINGH
+</text>
+
+<text x="700" y="246"
+      fill="#A5F3FC"
+      font-family="JetBrains Mono, monospace"
+      font-size="13"
+      text-anchor="middle"
+      letter-spacing="5">
+  CYBERSECURITY ENGINEERING
+</text>
+
+<text x="700" y="278"
+      fill="#C4B5FD"
+      font-family="JetBrains Mono, monospace"
+      font-size="11"
+      text-anchor="middle"
+      letter-spacing="2">
+  AI SECURITY · ENDPOINTS · NETWORKS · MALWARE
+</text>
+
+<!-- SIGNAL -->
+
+<circle cx="460" cy="325" r="2.8" fill="#67E8F9">
+
+  <animate
+    attributeName="cx"
+    values="460;930"
+    dur="5s"
+    repeatCount="indefinite"/>
+
+  <animate
+    attributeName="opacity"
+    values="0;1;1;0"
+    dur="5s"
+    repeatCount="indefinite"/>
+
+</circle>
+
+<line x1="460" y1="325"
+      x2="940" y2="325"
+      stroke="#67E8F9"
+      stroke-opacity="0.14"/>
+
+<!-- FOOT LABEL -->
+
+<text x="700" y="385"
+      fill="#64748B"
+      font-family="JetBrains Mono, monospace"
+      font-size="10"
+      text-anchor="middle"
+      letter-spacing="2">
+  OBSERVE · ANALYZE · BUILD · TEST
+</text>
+
+</svg>
