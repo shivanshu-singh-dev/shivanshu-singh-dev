@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 48" width="100%" height="100%">
+  <defs>
+    <linearGradient id="proj-hdr-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .font-mono { font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; }
+  </style>
+
+  <g transform="translate(0, 12)">
+    <rect x="0" y="0" width="165" height="24" rx="6" fill="#1e113d" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
+    <circle cx="12" cy="12" r="3" fill="#a855f7">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="24" y="16" class="font-mono" font-size="11" font-weight="700" fill="#e9d5ff" letter-spacing="1.5">FEATURED PROJECTS</text>
+    
+    <!-- Animated Flowing Rule -->
+    <line x1="178" y1="12" x2="980" y2="12" stroke="#334155" stroke-width="1" stroke-opacity="0.6"/>
+    <line x1="178" y1="12" x2="400" y2="12" stroke="url(#proj-hdr-grad)" stroke-width="1.5"/>
+    <circle cx="980" cy="12" r="2" fill="#38bdf8"/>
+  </g>
+</svg>

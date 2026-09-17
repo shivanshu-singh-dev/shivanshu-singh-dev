@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 160" width="100%" height="100%">
+  <defs>
+    <!-- Aurora Divider Gradient -->
+    <linearGradient id="footer-aurora" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#05030a" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#7c3aed" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.8"/>
+      <stop offset="75%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#040711" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Background Gradient -->
+    <linearGradient id="footer-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090516"/>
+      <stop offset="100%" stop-color="#040712"/>
+    </linearGradient>
+
+    <!-- Filter Glow -->
+    <filter id="glow-footer" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <style>
+    .font-sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .font-mono { font-family: 'SF Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; }
+  </style>
+
+  <!-- Background Base -->
+  <rect width="1000" height="160" rx="12" fill="url(#footer-bg)"/>
+  <rect x="1" y="1" width="998" height="158" rx="11" fill="none" stroke="#7c3aed" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Top Flowing Aurora Wave Line -->
+  <g filter="url(#glow-footer)">
+    <path fill="none" stroke="url(#footer-aurora)" stroke-width="2.5">
+      <animate attributeName="d" 
+        dur="10s" 
+        repeatCount="indefinite"
+        values="
+          M 0 20 Q 250 5, 500 20 T 1000 20;
+          M 0 20 Q 250 35, 500 20 T 1000 20;
+          M 0 20 Q 250 5, 500 20 T 1000 20"
+      />
+    </path>
+  </g>
+
+  <!-- Left Side: Identity Info -->
+  <g transform="translate(48, 75)">
+    <text x="0" y="0" class="font-sans" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="1">
+      SHIVANSHU SINGH
+    </text>
+    <text x="0" y="22" class="font-mono" font-size="11" font-weight="500" fill="#94a3b8" letter-spacing="1.2">
+      Computer Science • Cybersecurity <tspan fill="#64748b">|</tspan> <tspan fill="#c084fc">VIT Chennai</tspan>
+    </text>
+  </g>
+
+  <!-- Right Side: Clean Connect Buttons / Indicators -->
+  <g transform="translate(620, 60)">
+    <!-- GitHub Link Box -->
+    <g transform="translate(0, 0)">
+      <rect width="150" height="42" rx="8" fill="#130d2a" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="24" cy="21" r="3.5" fill="#a855f7"/>
+      <text x="38" y="26" class="font-mono" font-size="12" font-weight="600" fill="#f1f5f9">GitHub Profile</text>
+    </g>
+
+    <!-- LinkedIn Link Box -->
+    <g transform="translate(165, 0)">
+      <rect width="150" height="42" rx="8" fill="#0c192e" stroke="#06b6d4" stroke-width="1" stroke-opacity="0.4"/>
+      <circle cx="24" cy="21" r="3.5" fill="#38bdf8"/>
+      <text x="38" y="26" class="font-mono" font-size="12" font-weight="600" fill="#f1f5f9">LinkedIn</text>
+    </g>
+  </g>
+</svg>
