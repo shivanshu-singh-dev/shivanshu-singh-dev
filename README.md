@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&duration=3000&pause=800&color=00D8FF&center=true&vCenter=true&width=600&lines=Shivanshu+Singh;AI+%2F+Agent+Security+Researcher;Endpoint+%26+Network+Security;Building+Red-Team+Tooling+for+LLMs" alt="Typing SVG" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8E2DE2,100:F953C6&height=200&section=header&text=Shivanshu%20Singh&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=AI%20%2F%20Agent%20Security%20%7C%20Endpoint%20%26%20Network%20Security&descAlignY=55&descSize=18" alt="header" width="100%"/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=800&color=C147E9&center=true&vCenter=true&width=600&lines=AI+%2F+Agent+Security+Researcher;Endpoint+%26+Network+Security;VIT+Chennai+%7C+Cybersecurity" alt="Typing SVG" />
 
 </div>
 
@@ -16,24 +18,28 @@
 
 <br/>
 
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=gradient&customColorList=6,11,20&height=3&section=header&width=100%" alt="divider"/>
+
 ### Tech Stack
 
 <div align="left">
 
-![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/-Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![C++](https://img.shields.io/badge/-C++-00599C?style=flat-square&logo=cplusplus&logoColor=white)
-![FastAPI](https://img.shields.io/badge/-FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![MySQL](https://img.shields.io/badge/-MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
-![Scapy](https://img.shields.io/badge/-Scapy-000000?style=flat-square&logo=python&logoColor=white)
-![scikit--learn](https://img.shields.io/badge/-scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white)
-![Ollama](https://img.shields.io/badge/-Ollama-000000?style=flat-square&logo=ollama&logoColor=white)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white)
+![Python](https://img.shields.io/badge/-Python-8E2DE2?style=for-the-badge&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/-Java-C147E9?style=for-the-badge&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/-C-F953C6?style=for-the-badge&logo=c&logoColor=white)
+![FastAPI](https://img.shields.io/badge/-FastAPI-8E2DE2?style=for-the-badge&logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/-React-C147E9?style=for-the-badge&logo=react&logoColor=white)
+![MySQL](https://img.shields.io/badge/-MySQL-F953C6?style=for-the-badge&logo=mysql&logoColor=white)
+![Scapy](https://img.shields.io/badge/-Scapy-8E2DE2?style=for-the-badge&logo=python&logoColor=white)
+![scikit--learn](https://img.shields.io/badge/-scikit--learn-C147E9?style=for-the-badge&logo=scikitlearn&logoColor=white)
+![Ollama](https://img.shields.io/badge/-Ollama-F953C6?style=for-the-badge&logo=ollama&logoColor=white)
+![Git](https://img.shields.io/badge/-Git-8E2DE2?style=for-the-badge&logo=git&logoColor=white)
 
 </div>
 
 <br/>
+
+<img src="https://capsule-render.vercel.app/api?type=transparent&color=gradient&customColorList=6,11,20&height=3&section=header&width=100%" alt="divider"/>
 
 ### Featured Projects
 
@@ -82,6 +88,4 @@ Academic research project combining federated learning, differential privacy, an
 
 <br/>
 
-<div align="center">
-<sub>Building toward a career securing the systems and models that everyone else is racing to ship.</sub>
-</div>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:F953C6,100:8E2DE2&height=100&section=footer" alt="footer" width="100%"/>
