@@ -13,12 +13,10 @@
 
   <g transform="translate(0, 12)">
     <rect x="0" y="0" width="165" height="24" rx="6" fill="#1e113d" stroke="#a855f7" stroke-width="1" stroke-opacity="0.5"/>
-    <circle cx="12" cy="12" r="3" fill="#a855f7">
-      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.4s" repeatCount="indefinite"/>
-    </circle>
+    <circle cx="12" cy="12" r="3" fill="#a855f7" opacity="0.9"/>
     <text x="24" y="16" class="font-mono" font-size="11" font-weight="700" fill="#e9d5ff" letter-spacing="1.5">FEATURED PROJECTS</text>
     
-    <!-- Animated Flowing Rule -->
+    <!-- Static Rule -->
     <line x1="178" y1="12" x2="980" y2="12" stroke="#334155" stroke-width="1" stroke-opacity="0.6"/>
     <line x1="178" y1="12" x2="400" y2="12" stroke="url(#proj-hdr-grad)" stroke-width="1.5"/>
     <circle cx="980" cy="12" r="2" fill="#38bdf8"/>
